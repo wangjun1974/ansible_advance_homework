@@ -1,24 +1,4 @@
 - hosts: workstation
   become: yes
-
-  tasks:
-  - name: create frontend instance
-    include_role:
-      name: osp-servers
-      vars_from: frontend.yml
-  
-  - name: create app1 instance
-    include_role:
-      name: osp-servers
-      vars_from: app1.yml
-  
-  - name: create app2 instance
-    include_role:
-      name: osp-servers
-      vars_from: app2.yml
-  
-  - name: create db instance
-    include_role:
-      name: osp-servers
-      vars_from: db.yml
-
+  roles:
+    - osp-servers
