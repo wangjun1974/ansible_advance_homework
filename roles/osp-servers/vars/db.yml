@@ -1,0 +1,9 @@
+---
+instance_name: db
+state: present
+image: rhel-guest
+key_name: ansible_ssh
+flavor: m2.small
+security_group_name: db
+group: appdbs
+deployment: QA
