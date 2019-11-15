@@ -5,7 +5,10 @@
       cloud: ospcloud
       region_name: RegionOne
      register: result
-   - debug: var=result
+   - debug: 
+       var: result
+       verbosity: 4
+
    - name: Add host
      add_host:
       name: "{{ item.public_v4 }}"
